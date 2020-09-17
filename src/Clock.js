@@ -33,14 +33,17 @@ class Clock extends React.Component {
     let month = this.state.time.getMonth() + 1;
     let year = this.state.time.getFullYear();
     return (
-      <div className="date-time">
-        <div className="clock-container">
-          <span className="clock-title">Time:</span>
-          <span className="clock">{`${hours}:${minutes}:${seconds}`}</span>
-        </div>
-        <div className="clock-container">
-          <span className="date-title">Date:</span>
-          <span className="date">{`${month}/${day}/${year}`}</span>
+      <div className="whole-clock">
+        <h1 className="widget-header">Clock</h1>
+        <div className="date-time">
+          <div className="clock-container">
+            <span className="clock-title">Time:</span>
+            <span className="clock">{`${hours}:${minutes}:${seconds}`}</span>
+          </div>
+          <div className="clock-container">
+            <span className="date-title">Date:</span>
+            <span className="date">{`${month}/${day}/${year}`}</span>
+          </div>
         </div>
       </div>
     )

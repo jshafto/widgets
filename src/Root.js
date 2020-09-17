@@ -18,10 +18,10 @@ const Root = () => {
     {title: 'three', content: 'Third folder here'}
   ];
   return (
-    <div>
+    <div className="widget-container">
       <Clock />
-      <Folder folders={folders}/>
       <Weather />
+      <Folder folders={folders}/>
       <Autocomplete names={["Cheese", "Burger"]}/>
     </div>
   )

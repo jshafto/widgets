@@ -16,9 +16,9 @@ class Autocomplete extends React.Component {
   }
 
   updateInput = (e) => {
-     this.setState({
-          inputVal: e.target.value
-     })
+    this.setState({
+      inputVal: e.target.value
+    })
   }
 
   matches = () => {
@@ -32,13 +32,15 @@ class Autocomplete extends React.Component {
   render() {
     return (
       <div className="auto-box-roll-out">
-           <h1>Autocomplete</h1>
-           <input onChange={this.handleInput} value={this.state.inputVal} className="auto-input" type="text" />
-           <ul className="item-list" onClick={this.updateInput}>
-              {/* <CSSTransition> */}
-                {this.matches().map((name, idx) => <li key={idx}>{name}</li>)}
-              {/* </CSSTransition> */}
-           </ul>
+        <h1 className="widget-header">Autocomplete</h1>
+        <div className="auto-box-content">
+        <input onChange={this.handleInput} value={this.state.inputVal} className="auto-input" type="text" />
+        <ul className="item-list" onClick={this.updateInput}>
+          {/* <CSSTransition> */}
+          {this.matches().map((name, idx) => <li key={idx}>{name}</li>)}
+          {/* </CSSTransition> */}
+        </ul>
+        </div>
       </div>
     )
   }

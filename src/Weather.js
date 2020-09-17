@@ -6,22 +6,29 @@ class Weather extends React.Component {
     super();
 
     this.state = {
-      weather: null,
-      city: null
+      weather: "Loading...",
+      city: "Loading..."
     };
 
   }
 
   pollWeather = async ({coords}) => {
+    const apikey = "insertAPIKeyHere"
     const {latitude, longitude} = coords;
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=`;
-    const res = await fetch(url);
-    const data = await res.json();
-    console.log(data);
-    this.setState({
-         weather: Math.floor((data.main.temp-273) * (9/5) + 32),
-         city: data.name,
-    });
+    try {
+      const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      this.setState({
+           weather: Math.floor((data.main.temp-273) * (9/5) + 32),
+           city: data.name,
+      });
+    } catch {
+      this.setState({
+        weather: "Unknown",
+        city: "Unknown",
+      })
+    }
   }
 
   componentDidMount () {
@@ -32,10 +39,10 @@ class Weather extends React.Component {
   render() {
     return (
       <div className="weather-box">
-        <h1>Weather:</h1>
+        <h1 className="widget-header">Weather</h1>
         <div className="weather-city">
-          <div>{this.state.weather}</div>
-          <div>{this.state.city}</div>
+          <div>{`${this.state.weather}°`}</div>
+          <div>{`${this.state.city}`}</div>
         </div>
       </div>
     )

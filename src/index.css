@@ -1,73 +1,138 @@
 /* TODO Add site wide styles */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.widget-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+
 .date-time {
-     font-family: "Orbitron", sans-serif;
+  margin:25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: chartreuse;
 }
 .clock-container {
+  font-family: "Orbitron", sans-serif;
   display:flex;
   justify-content: space-between;
-  width: 20%;
-  background-color: chartreuse;
   padding: 20px;
 }
 
 .tab-header {
-     margin: 0 20px;
-     display: flex;
-     justify-content: space-between;
-   }
 
-   .tab-header > li {
-     width: 33%;
-     border-top: 2px solid black;
-     border-left: 1px solid black;
-     border-right: 1px solid black;
-     border-bottom: 2px solid black;
-     border-top-left-radius: 10px;
-     border-top-right-radius: 10px;
-     padding: 5px;
-     text-align: center;
-     cursor: pointer;
-     background-color: lightpink;
-   }
+  margin: 0 20px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
 
-   .tab-header > li:first-child {
-     border-left: 2px solid black;
-   }
+.tab-header > li {
+  width: 33%;
+  border-top: 2px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: lightpink;
+}
 
-   .tab-header > li:last-child {
-     border-right: 2px solid black;
-   }
+.tab-header > li:first-child {
+  border-left: 2px solid black;
+}
 
-   .tab-header > li:hover {
-     background-color: lightblue;
-     color: white;
-   }
+.tab-header > li:last-child {
+  border-right: 2px solid black;
+}
 
-   .tab-header > li.active {
-     color: white;
-     font-weight: bold;
-     background-color: lightblue;
-     border-bottom: 0px;
-   }
+.tab-header > li:hover {
+  background-color: lightblue;
+  color: white;
+}
 
-   .tabs {
-     width: 240px;
-   }
+.tab-header > li.active {
+  color: white;
+  font-weight: bold;
+  background-color: lightblue;
+  border-bottom: 0px;
+}
 
-   .tab-content {
-     font-weight: bold;
-     color: white;
-     height: 192px;
-     margin: 0 20px;
-     border-left: 2px solid black;
-     border-bottom: 2px solid black;
-     border-right: 2px solid black;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     background-color: lightblue;
-   }
+.tabs {
+  width: 240px;
+}
 
-   .auto-input {
-        border: 2px solid chocolate;
-   }
+.tab-content {
+  font-weight: bold;
+  color: white;
+  height: 192px;
+  margin: 0 20px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+
+
+.weather-city{
+  margin:25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: #b784a7;
+  height: 100px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+}
+.weather-box{
+  width: 240px;
+
+}
+
+
+.auto-box-content{
+  margin:25px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: lightgoldenrodyellow;
+  height: 100px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+
+}
+.auto-box-roll-out{
+  width: 240px;
+  margin: 25px;
+
+}
+
+.auto-input {
+  background-color:white;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding:4px;
+}
+
+.widget-header {
+  font-weight:bold;
+  font-size: 1.5rem;
+}
